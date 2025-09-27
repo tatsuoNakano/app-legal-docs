@@ -5,6 +5,7 @@
       "id": "myapp-2025-09-20",
       "title": "新作公開：Focus Timer",
       "message": "ポモドーロ＋ToDoを強化。無料版あり。",
+      "logo": "https://example.com/logo.png",
       "platform": {
         "ios": "https://apps.apple.com/app/id1234567890",
         "android": "https://play.google.com/store/apps/details?id=com.example.focus"
