@@ -2,16 +2,16 @@
   "version": 1,
   "items": [
     {
-      "id": "myapp-2025-09-20",
-      "title": "新作公開：Focus Timer",
-      "message": "ポモドーロ＋ToDoを強化。無料版あり。",
+      "id": "myapp-2025-11-19",
+      "title": "New Release: Focus Timer",
+      "message": "Enhanced Pomodoro + To-Do. Free version available.",
       "logo": "https://tatsuonakano.github.io/app-legal-docs/logo.png",
       "platform": {
-        "ios": "https://apps.apple.com/app/id1234567890",
+        "ios": "https://apps.apple.com/jp/app/todo-with-pomodoro/id6753998457",
         "android": "https://play.google.com/store/apps/details?id=com.example.focus"
       },
-      "releasedAt": "2025-09-20T00:00:00Z",
-      "minAppVersion": "0.0.0"
+      "releasedAt": "2025-11-19T00:00:00Z",
+      "minAppVersion": "1.0.0"
     }
   ]
 }
