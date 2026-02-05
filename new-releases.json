@@ -8,7 +8,7 @@
       "logo": "https://tatsuonakano.github.io/app-legal-docs/logo.png",
       "platform": {
         "ios": "https://apps.apple.com/jp/app/todo-with-pomodoro/id6753998457",
-        "android": "https://play.google.com/store/apps/details?id=com.example.focus"
+        "android": "https://play.google.com/store/apps/details?id=com.tatsuonakano.todowithpomodoro"
       },
       "releasedAt": "2025-11-19T00:00:00Z",
       "minAppVersion": "1.0.0"
