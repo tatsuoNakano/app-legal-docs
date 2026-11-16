@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Tatsuo Nakano - Links</title>
+    <meta name="description" content="Tatsuo Nakano のポートフォリオ・アプリ・GitHubなどのリンク一覧です。" />
+    
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Tatsuo Nakano - Links" />
+    <meta property="og:description" content="Tatsuo Nakano の公式リンク集（ポートフォリオ、iOS/Androidアプリ、GitHub）" />
+    <meta property="og:image" content="./logo.png" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)" />
+
+    <style>
+        :root {
+            --bg: #f8fafc;
+            --card-bg: rgba(255, 255, 255, 0.85);
+            --card-border: rgba(226, 232, 240, 0.8);
+            --card-hover-border: #cbd5e1;
+            --text-main: #0f172a;
+            --text-sub: #64748b;
+            --shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
+            --shadow-hover: 0 12px 28px -4px rgba(15, 23, 42, 0.1), 0 4px 10px -2px rgba(15, 23, 42, 0.05);
+            --radius-outer: 20px;
+            --radius-inner: 14px;
+            --accent: #2563eb;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0b0d13;
+                --card-bg: rgba(22, 26, 35, 0.8);
+                --card-border: rgba(255, 255, 255, 0.08);
+                --card-hover-border: rgba(255, 255, 255, 0.18);
+                --text-main: #f8fafc;
+                --text-sub: #94a3b8;
+                --shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+                --shadow-hover: 0 12px 32px -4px rgba(0, 0, 0, 0.6);
+                --accent: #3b82f6;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 48px 20px 40px;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.08) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(99, 102, 241, 0.08) 0px, transparent 50%);
+            background-attachment: fixed;
+            line-height: 1.5;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Profile Header */
+        .profile {
+            text-align: center;
+            margin-bottom: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .avatar-wrap {
+            position: relative;
+            width: 96px;
+            height: 96px;
+            margin-bottom: 16px;
+        }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            display: block;
+        }
+
+        .avatar-fallback {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: 700;
+            color: #ffffff;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            border: 3px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .profile-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 4px;
+        }
+
+        .profile-bio {
+            font-size: 0.925rem;
+            color: var(--text-sub);
+            font-weight: 500;
+        }
+
+        /* Link Cards List */
+        .links-list {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            padding: 16px 18px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius-outer);
+            box-shadow: var(--shadow);
+            text-decoration: none;
+            color: inherit;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+                        box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+                        border-color 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--card-hover-border);
+        }
+
+        .link-card:active {
+            transform: scale(0.985);
+        }
+
+        .icon-box {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-inner);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+            flex-shrink: 0;
+            transition: transform 0.2s ease;
+        }
+
+        .link-card:hover .icon-box {
+            transform: scale(1.05);
+        }
+
+        /* Specific icon colors */
+        .icon-about {
+            background: rgba(37, 99, 235, 0.12);
+            color: #2563eb;
+        }
+        @media (prefers-color-scheme: dark) {
+            .icon-about { background: rgba(59, 130, 246, 0.2); color: #60a5fa; }
+        }
+
+        .icon-apple {
+            background: rgba(0, 0, 0, 0.06);
+            color: #000000;
+        }
+        @media (prefers-color-scheme: dark) {
+            .icon-apple { background: rgba(255, 255, 255, 0.12); color: #ffffff; }
+        }
+
+        .icon-googleplay {
+            background: rgba(16, 185, 129, 0.12);
+            color: #059669;
+        }
+        @media (prefers-color-scheme: dark) {
+            .icon-googleplay { background: rgba(16, 185, 129, 0.2); color: #34d399; }
+        }
+
+        .icon-github {
+            background: rgba(36, 41, 47, 0.1);
+            color: #24292f;
+        }
+        @media (prefers-color-scheme: dark) {
+            .icon-github { background: rgba(255, 255, 255, 0.12); color: #f0f6fc; }
+        }
+
+        .icon-box svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        .card-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .card-title {
+            font-size: 1.02rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            margin-bottom: 2px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .card-desc {
+            font-size: 0.825rem;
+            color: var(--text-sub);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .arrow-icon {
+            color: var(--text-sub);
+            opacity: 0.5;
+            transition: opacity 0.2s, transform 0.2s;
+            margin-left: 8px;
+            flex-shrink: 0;
+        }
+
+        .link-card:hover .arrow-icon {
+            opacity: 1;
+            transform: translateX(3px);
+            color: var(--accent);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: auto;
+            padding-top: 40px;
+            text-align: center;
+            font-size: 0.78rem;
+            color: var(--text-sub);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        footer a {
+            color: inherit;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        footer a:hover {
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container" role="main">
+        <!-- Profile Section -->
+        <header class="profile">
+            <div class="avatar-wrap">
+                <img src="./logo.png" alt="Tatsuo Nakano" class="avatar" onerror="this.style.display='none'; document.getElementById('avatar-fallback').style.display='flex';" />
+                <div id="avatar-fallback" class="avatar-fallback" style="display: none;">TN</div>
+            </div>
+            <h1 class="profile-name">Tatsuo Nakano</h1>
+            <p class="profile-bio">Application Developer &amp; Creator</p>
+        </header>
+
+        <!-- Link Items -->
+        <nav class="links-list" aria-label="外部リンク集">
+            <!-- 1. itisiro.com (About) -->
+            <a href="https://itisiro.com/about.html" class="link-card" target="_blank" rel="noopener noreferrer">
+                <div class="icon-box icon-about" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <div class="card-title">About Me</div>
+                    <div class="card-desc">itisiro.com / プロフィール・活動紹介</div>
+                </div>
+                <svg class="arrow-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </a>
+
+            <!-- 2. App Store (iOS) -->
+            <a href="https://apps.apple.com/jp/developer/tatsuo-nakano/id1846200191" class="link-card" target="_blank" rel="noopener noreferrer">
+                <div class="icon-box icon-apple" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 7.17c.6-0.73 1.01-1.75.9-2.77-.87.04-1.92.58-2.54 1.31-.55.64-.99 1.67-.86 2.67.97.08 1.95-.49 2.5-1.21z"/>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <div class="card-title">App Store</div>
+                    <div class="card-desc">iOS アプリケーション一覧</div>
+                </div>
+                <svg class="arrow-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </a>
+
+            <!-- 3. Google Play (Android) -->
+            <a href="https://play.google.com/store/apps/developer?id=Tatsuo+Nakano" class="link-card" target="_blank" rel="noopener noreferrer">
+                <div class="icon-box icon-googleplay" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M3.609 1.814L13.793 12 3.61 22.186a2.21 2.21 0 0 1-.61-1.586V3.4c0-.61.22-1.18.609-1.586zm11.254 11.255l2.25 2.25-11.83 6.83 9.58-9.08zm0-2.138L5.283 1.85l11.83 6.83-2.25 2.25zm1.536 1.07l4.02-2.32c.8-.46.8-1.22 0-1.68l-4.02-2.32-2.07 2.07 2.07 2.25z"/>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Google Play</div>
+                    <div class="card-desc">Android アプリケーション一覧</div>
+                </div>
+                <svg class="arrow-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </a>
+
+            <!-- 4. GitHub -->
+            <a href="https://github.com/tatsuoNakano" class="link-card" target="_blank" rel="noopener noreferrer">
+                <div class="icon-box icon-github" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <div class="card-title">GitHub</div>
+                    <div class="card-desc">@tatsuoNakano / オープンソース &amp; 開発</div>
+                </div>
+                <svg class="arrow-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </a>
+        </nav>
+
+        <!-- Footer -->
+        <footer>
+            <div>© <span id="year">2025</span> Tatsuo Nakano. All rights reserved.</div>
+            <div>
+                <a href="./index.html">Legal Documents</a>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
